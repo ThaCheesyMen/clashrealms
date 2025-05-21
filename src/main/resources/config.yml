@@ -1,0 +1,29 @@
+# GuildWarsPlugin Configuration
+
+# Guild Claim Upkeep Settings
+# Amount of Guild XP required per claimed chunk during each upkeep interval.
+upkeep-xp-per-chunk: 50
+# How often upkeep is processed, in hours.
+upkeep-interval-hours: 24
+
+# Guild Outpost Settings
+outposts:
+  XP_SIPHON:
+    creation-cost-xp: 1000
+    generation-xp: 100
+    generation-interval-hours: 6
+  BARRACKS:
+    creation-cost-xp: 750
+    generation-xp: 25
+    generation-interval-hours: 8
+  RESOURCE_SILO:
+    creation-cost-xp: 1200
+    # RESOURCE_SILO specific generation settings
+    generation-interval-hours: 12 # How often it TRIES to generate
+    generation-chance-percent: 20 # Chance (0-100) to generate resources per interval
+    # Resources to generate if chance succeeds (these are examples, can be more complex)
+    # Format: MATERIAL_NAME: minAmount-maxAmount
+    generated-resources:
+      STONE: "5-10"
+      COAL: "2-5"
+      IRON_ORE: "1-2"
